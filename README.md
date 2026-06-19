@@ -1,4 +1,4 @@
-# NotesApp
+# Todo App
 
 A simple and efficient notes application built with React and Vite.
 
