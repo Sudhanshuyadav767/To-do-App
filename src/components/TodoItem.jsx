@@ -35,15 +35,17 @@ export default function TodoItem({ todo, onToggleComplete, onDeleteTodo, onViewT
         </div>
       
         <div className="flex items-center gap-2 ml-2">
-          <button
-            onClick={(e) => {
-              e.stopPropagation();
-              onToggleComplete(todo.id);
-            }}
-            className={`px-3 py-1.5 rounded-lg text-sm font-bold transition-all shadow-md ${todo.completed ? 'bg-gray-700 text-gray-300 hover:bg-gray-600' : 'bg-green-600 text-white hover:bg-green-500 hover:shadow-green-900/30'}`}
-          >
-            {todo.completed ? 'Undo' : 'Done'}
-          </button>
+          {!todo.completed && (
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                onToggleComplete(todo.id);
+              }}
+              className="bg-green-600 text-white hover:bg-green-500 hover:shadow-green-900/30 px-3 py-1.5 rounded-lg text-sm font-bold transition-all shadow-md"
+            >
+              Done
+            </button>
+          )}
           <button
             onClick={(e) => {
               e.stopPropagation();
