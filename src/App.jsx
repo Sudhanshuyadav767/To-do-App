@@ -51,7 +51,7 @@ export default function App() {
       <div className="w-full md:w-1/2 bg-black border-r border-red-800 p-6 sm:p-10 flex flex-col h-1/2 md:h-full pt-12 md:pt-10">
         <div className="max-w-lg mx-auto w-full">
           <h2 className="text-2xl md:text-4xl font-extrabold text-red-500 mb-8 border-b border-red-800 pb-4">
-            Create Your To-DO List
+            Create Your <span className="text-white">To-DO List</span>
           </h2>
           <TodoInput onAddTodo={handleAddTodo} />
         </div>
